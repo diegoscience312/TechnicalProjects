@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Ortega Castellanos | Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="container">
+        <header class="animate__animated animate__fadeIn">
+            <div class="profile">
+                <div class="profile-img-container">
+                    <img src="Profile.png" alt="My Profile Picture" class="profile-img">
+                </div>
+                <h1 class="profile-name">Diego Ortega Castellanos</h1>
+                <p class="profile-title">Software Developer | Data Scientist & Maths</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/diego-ortega-castellanos-436b2b210/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Diego-Ortega-Castellanos" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:diego571106@hotmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="about-me">
+                <p>I'm a passionate developer specializing in mobile app development and data science. I excel in building innovative solutions using Swift for iOS applications and Python for data-driven insights. With expertise in machine learning frameworks, I create intelligent and efficient applications that enhance user experience and decision-making.</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="projects-section animate__animated animate__fadeInUp animate__delay-1s">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects">
+                    <!-- Project 1: Real Madrid App -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-preview">
+                            <img src="1.png" alt="Real Madrid Store App" class="project-image">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Real Madrid Store App</h3>
+                                <p class="project-short">iOS application enhancing fan shopping experience</p>
+                                <span class="view-more">View Details</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: Stock Market Prediction -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-preview">
+                            <img src="2.png" alt="Stock Market Prediction" class="project-image">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Stock Market Prediction</h3>
+                                <p class="project-short">LSTM neural networks for stock price forecasting</p>
+                                <span class="view-more">View Details</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: Rising Stars -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-preview">
+                            <img src="3.png" alt="Rising Stars in Research" class="project-image">
+                            <div class="project-overlay">
+                                <h3 class="project-title">Rising Stars Identification</h3>
+                                <p class="project-short">Data filtering and ML for identifying academic talent</p>
+                                <span class="view-more">View Details</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills animate__animated animate__fadeInUp animate__delay-1s">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-item" data-aos="fade-up">Swift</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="50">iOS Development</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="100">UI/UX Design</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="150">Python</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="200">Machine Learning</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="250">TensorFlow</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="300">LSTM Networks</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="350">Data Analysis</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="400">Data Visualization</div>
+                    <div class="skill-item" data-aos="fade-up" data-aos-delay="450">Maths</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="animate__animated animate__fadeIn animate__delay-2s">
+            <h2>Interested in working together?</h2>
+            <a href="mailto:diego571106@hotmail.com" class="contact-btn">Contact Me</a>
+            <p>&copy; 2025 Diego Ortega Castellanos - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Modal único para mostrar detalles del proyecto -->
+    <div id="project-modal" class="project-details" style="display:none;">
+        <div class="project-details-content">
+            <div class="details-header">
+                <button id="modal-close" class="close-details"><i class="fas fa-times"></i></button>
+                <h3 id="modal-title" class="project-title"></h3>
+                <p id="modal-duration" class="project-duration"></p>
+                <p id="modal-institution" class="project-institution"></p>
+            </div>
+            <div id="modal-description"></div>
+            <div id="modal-tags" class="project-tags"></div>
+            <a id="modal-link" class="project-link" target="_blank">View project <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Script para animaciones e interactividad -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener("DOMContentLoaded", function () {
+            // Inicializar AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+            });
+
+            // Custom cursor
+            const cursor = document.querySelector(".cursor");
+            document.addEventListener("mousemove", (e) => {
+                requestAnimationFrame(() => {
+                    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                });
+            });
+
+            // Elementos del modal
+            const modal = document.getElementById("project-modal");
+            const modalClose = document.getElementById("modal-close");
+            const modalTitle = document.getElementById("modal-title");
+            const modalDuration = document.getElementById("modal-duration");
+            const modalInstitution = document.getElementById("modal-institution");
+            const modalDescription = document.getElementById("modal-description");
+            const modalTags = document.getElementById("modal-tags");
+            const modalLink = document.getElementById("modal-link");
+
+            // Función para abrir el modal con datos específicos
+            function openProjectModal(data) {
+                modalTitle.textContent = data.title;
+                modalDuration.textContent = data.duration;
+                modalInstitution.textContent = data.institution;
+                
+                // Dividir la descripción en párrafos
+                const paragraphs = data.description.split('. ');
+                let formattedDescription = '';
+                let currentParagraph = '';
+                
+                // Agrupar las oraciones en párrafos (cada 2-3 oraciones)
+                for (let i = 0; i < paragraphs.length; i++) {
+                    if (i > 0 && i % 3 === 0) { // Cambiar a cada 2 o 4 según prefieras
+                        formattedDescription += '<p>' + currentParagraph.trim() + '.</p>';
+                        currentParagraph = paragraphs[i];
+                    } else {
+                        currentParagraph += paragraphs[i] + (i < paragraphs.length - 1 ? '. ' : '');
+                    }
+                }
+                
+                // Agregar el último párrafo si queda algo
+                if (currentParagraph) {
+                    formattedDescription += '<p>' + currentParagraph.trim() + '</p>';
+                }
+                
+                modalDescription.innerHTML = formattedDescription;
+                
+                // Resto del código...
+                // Limpiar y añadir tags
+                modalTags.innerHTML = '';
+                data.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'project-tag';
+                    tagElement.textContent = tag;
+                    modalTags.appendChild(tagElement);
+                });
+                
+                // Configurar enlace
+                modalLink.href = data.link;
+                
+                // Mostrar modal
+                modal.style.display = 'flex';
+                document.body.classList.add("no-scroll");
+                
+                // Animar entrada
+                setTimeout(() => {
+                    modal.style.opacity = '1';
+                    modal.querySelector('.project-details-content').style.transform = 'translateY(0)';
+                }, 10);
+            }
+
+            // Función para cerrar el modal
+            function closeProjectModal() {
+                modal.querySelector('.project-details-content').style.transform = 'translateY(50px)';
+                modal.style.opacity = '0';
+                
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.classList.remove("no-scroll");
+                }, 300);
+            }
+
+            // Escuchar clic en el botón de cerrar
+            modalClose.addEventListener('click', closeProjectModal);
+            
+            // Cerrar al hacer clic fuera del contenido
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeProjectModal();
+                }
+            });
+
+            // Configurar clicks en las tarjetas de proyecto
+            const projectCards = document.querySelectorAll(".project-card");
+            
+            projectCards.forEach((card, index) => {
+                const viewMoreBtn = card.querySelector(".view-more");
+                
+                // Datos para cada proyecto
+                const projectData = [
+                    {
+                        title: "Real Madrid Store App Development Gamification & Personalized Shopping Experience",
+                        duration: "September 2024 - December 2024",
+                        institution: "ESEI International Business School Barcelona",
+                        description: "As part of my work, I developed an official application for Real Madrid stores using Swift in Xcode. \The goal was to enhance the in-store customer experience through an interactive and engaging digital platform. The app includes gamification, location-based offers, a digital collection system, visit-based rewards, and a secure login system using email and password. To build this project, I leveraged several tools. Swift and Xcode were used for the core development of the app, ensuring a native and optimized experience for iOS users. Softr Studio played a crucial role in creating a data analysis page linked to the application. Airtable was used as the primary database to manage user information and store promotions, while Zapier was implemented to automate processes, making the app more efficient and reducing manual work. One of the biggest challenges was implementing real-time data updates for the news section, ensuring users always had access to the latest information. Additionally, optimizing UX/UI was a key focus to make navigation seamless and intuitive. Another important aspect was the integration of No-Code tools like Softr and Airtable, which allowed for rapid iteration and reduced development time. Automating processes with Zapier also streamlined operations, minimizing the need for manual input and enhancing overall efficiency. Throughout this project, I gained valuable experience in combining traditional development with No-Code solutions, allowing me to focus on high-impact features while leveraging automation to handle repetitive tasks.",
+                        tags: ["Swift", "iOS", "UI/UX", "SwiftUI", "SQL", "Firebase", "API Integration", "Zapier", "Airtable", "Softr Studio", "Authentication Systems", "Geolocation Integration"],
+                        link: "https://github.com/Diego-Ortega-Castellanos/Real-Madrid-Official-App/blob/main/RealMadridApp.xcodeproj.zip"
+                    },
+                    {
+                        title: "Stock Market Prediction using LSTM Neural Networks",
+                        duration: "January 2023 - March 2023",
+                        institution: "Tecnológico de Monterrey",
+                        description: "I developed a stock market price prediction model using LSTM (Long Short-Term Memory) neural networks to forecast Apple Inc. (AAPL) stock prices. Using the Yahoo Finance API, I collected five years of historical stock data, including not only closing prices but also technical indicators like moving averages, RSI, volatility, and volume changes. These additional features provided a more comprehensive dataset for training. To prepare the data, I applied MinMax scaling for normalization and created 30-day sequences to capture long-term dependencies. The dataset was split 80% for training and 20% for testing. I designed a deep learning model with bidirectional LSTM layers, dropout for regularization, and Huber loss to enhance prediction stability. The model was trained using Adam optimization and included early stopping and checkpointing to prevent overfitting. Once trained, the model was evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R² score, providing insights into prediction accuracy. To visualize results, I plotted actual vs. predicted prices and implemented a function to forecast stock prices for the next seven days based on the last available data. This project allowed me to refine my deep learning skills for time series forecasting, improve feature engineering for financial models, and optimize LSTM architectures for real-world applications. I also gained experience in integrating technical indicators into machine learning models to enhance prediction accuracy.",
+                        tags: ["Python", "LSTM", "TensorFlow", "Machine Learning", "Neural Networks", "Financial Data Analysis", "Time Series Forecasting", "Data Preprocessing", "Forecasting & Automation" ],
+                        link: "https://github.com/Diego-Ortega-Castellanos/Stock-Market-Action-Prediction-LSTM/blob/main/StockMarketPrediction.py"
+                    },
+                    {
+                        title: "Identification of Rising Stars through Data Filtering and Machine Learning",
+                        duration: "August 2022 - October 2022",
+                        institution: "Tecnológico de Monterrey",
+                        description: "I developed a data analysis model to identify rising stars in academic research by analyzing author publication metrics. Using Python libraries such as pandas, scikit-learn, and statsmodels, I processed and merged large datasets from Scopus, extracting key bibliometric indicators like citations, impact factors, and author-specific metrics. The dataset was cleaned, missing values were handled, and relevant features were engineered to improve predictive accuracy. To predict an author’s future impact, I implemented multiple machine learning models, including Linear Regression, Decision Trees, and K-Nearest Neighbors (KNN). The data was split into training and test sets, and different preprocessing techniques, such as feature scaling and polynomial transformations, were applied to optimize performance. The models were evaluated using R² score, Mean Squared Error (MSE), and Mean Absolute Error (MAE) to measure their predictive accuracy. For visualization and interpretability, I used seaborn and Matplotlib to explore trends in research impact, correlations between metrics, and model performance comparisons. Additionally, I leveraged decision tree visualizations to interpret model decisions, providing insights into the most influential factors for academic success. This project enhanced my expertise in data preprocessing, feature engineering, and predictive modeling for bibliometric analysis. By working with real-world academic data, I strengthened my ability to derive meaningful insights and apply machine learning techniques to assess research impact effectively.",
+                        tags: ["Python", "Data Analysis", "Machine Learning", "Data Visualization", "Pandas", "Numpy", "Model Evaluation & Optimization", "Data Visualization & Interpretation"],
+                        link: "https://github.com/Diego-Ortega-Castellanos/Searching-a-rising-star/blob/main/RisingStars.ipynb"
+                    }
+                ];
+                
+                // Añadir evento de clic a cada botón de ver más
+                viewMoreBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    openProjectModal(projectData[index]);
+                });
+                
+                // También hacer que toda la superposición sea clickeable
+                card.querySelector(".project-overlay").addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    openProjectModal(projectData[index]);
+                });
+            });
+
+            // Scroll reveal para los títulos de sección
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            document.querySelectorAll(".section-title").forEach((title) => {
+                title.classList.add("hidden");
+                observer.observe(title);
+            });
+        });
+    </script>
+</body>
+</html>
