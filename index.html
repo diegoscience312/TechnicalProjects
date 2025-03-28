@@ -6,366 +6,583 @@
     <title>Diego Ortega Castellanos | Portfolio</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor"></div>
+    <!-- Background elements -->
+    <div class="noise-overlay"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <nav class="main-nav">
+        <div class="nav-logo">DO</div>
+        <div class="nav-links">
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link contact-link">Contact</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
     <div class="container">
-        <header class="animate__animated animate__fadeIn">
-            <div class="profile">
-                <div class="profile-img-container">
-                    <img src="Profile.png" alt="My Profile Picture" class="profile-img">
+        <header id="home">
+            <div class="split-header">
+                <div class="header-text">
+                    <h1 class="glitch-text" data-text="Diego Ortega">Diego Ortega</h1>
+                    <h2 class="gradient-text">Data Scientist & Software Developer</h2>
+                    <p class="header-intro">I specialize in data science and app development, building intelligent applications that leverage data-driven insights. Using Swift for iOS and Python for analytics and machine learning, I create innovative solutions that enhance user experience and drive meaningful impact.</p>
+                    <div class="header-cta">
+                        <a href="#projects" class="btn primary-btn">View My Work</a>
+                        <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                    </div>
                 </div>
-                <h1 class="profile-name">Diego Ortega Castellanos</h1>
-                <p class="profile-title">Software Developer | Data Scientist & Maths</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/diego-ortega-castellanos-436b2b210/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/diegoscience312" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:diego571106@hotmail.com"><i class="fas fa-envelope"></i></a>
+                <div class="header-visual">
+                    <div class="profile-container">
+                        <div class="profile-outline"></div>
+                        <img src="Profile.png" alt="Diego Ortega" class="profile-img">
+                        <div class="profile-tech-stack">
+                            <span class="tech-item">Swift</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">ML</span>
+                            <span class="tech-item">SQL</span>
+                            <span class="tech-item">AI</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="about-me">
-                <p>I'm a passionate developer specializing in mobile app development and data science. I excel in building innovative solutions using Swift for iOS applications and Python for data-driven insights. With expertise in machine learning frameworks, I create intelligent and efficient applications that enhance user experience and decision-making.</p>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
             </div>
         </header>
 
         <main>
-            <section class="projects-section animate__animated animate__fadeInUp animate__delay-1s">
-                <h2 class="section-title">My Projects</h2>
-                <div class="projects">
-                    <!-- Project 1: Real Madrid App -->
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-preview">
-                            <img src="1.png" alt="Real Madrid Store App" class="project-image">
-                            <div class="project-overlay">
+            <section id="projects" class="projects-section">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">Selected Work</h2>
+                    <p class="section-subtitle">A showcase of my technical projects and applications</p>
+                </div>
+                
+                <div class="projects-gallery">
+                    <!-- Project cards -->
+                    <div class="project-card" data-project="0">
+                        <div class="project-card-inner">
+                            <div class="project-image-container">
+                                <img src="1.png" alt="Real Madrid Store App" class="project-image">
+                            </div>
+                            <div class="project-content">
                                 <h3 class="project-title">Real Madrid Store App</h3>
-                                <p class="project-short">iOS application enhancing fan shopping experience</p>
-                                <span class="view-more">View Details</span>
+                                <p class="project-description">iOS application enhancing fan shopping experience with gamification and personalized offers.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Swift</span>
+                                    <span class="project-tag">iOS</span>
+                                    <span class="project-tag">UI/UX</span>
+                                </div>
+                                <button class="view-project-btn">View Project <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Project 2: Stock Market Prediction -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-preview">
-                            <img src="2.png" alt="Stock Market Prediction" class="project-image">
-                            <div class="project-overlay">
+                    <div class="project-card" data-project="1">
+                        <div class="project-card-inner">
+                            <div class="project-image-container">
+                                <img src="2.png" alt="Stock Market Prediction" class="project-image">
+                            </div>
+                            <div class="project-content">
                                 <h3 class="project-title">Stock Market Prediction</h3>
-                                <p class="project-short">LSTM neural networks for stock price forecasting</p>
-                                <span class="view-more">View Details</span>
+                                <p class="project-description">LSTM neural networks for accurate stock price forecasting with technical indicators.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">ML</span>
+                                    <span class="project-tag">LSTM</span>
+                                </div>
+                                <button class="view-project-btn">View Project <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Project 3: Rising Stars -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-preview">
-                            <img src="3.png" alt="Rising Stars in Research" class="project-image">
-                            <div class="project-overlay">
+                    <div class="project-card" data-project="2">
+                        <div class="project-card-inner">
+                            <div class="project-image-container">
+                                <img src="3.png" alt="Rising Stars in Research" class="project-image">
+                            </div>
+                            <div class="project-content">
                                 <h3 class="project-title">Rising Stars Identification</h3>
-                                <p class="project-short">Data filtering and ML for identifying academic talent</p>
-                                <span class="view-more">View Details</span>
+                                <p class="project-description">Data filtering and ML algorithms for identifying emerging academic talent.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Data Analysis</span>
+                                    <span class="project-tag">Machine Learning</span>
+                                </div>
+                                <button class="view-project-btn">View Project <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 4: Wave detection -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-preview">
-                            <img src="4.png" alt="Rising Stars in Research" class="project-image">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Wave Detection and Signal Processing System</h3>
-                                <p class="project-short">Advanced Signal Processing for Wave Detection and Analysis</p>
-                                <span class="view-more">View Details</span>
+                    
+                    <div class="project-card" data-project="3">
+                        <div class="project-card-inner">
+                            <div class="project-image-container">
+                                <img src="4.png" alt="Wave Detection" class="project-image">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Wave Detection System</h3>
+                                <p class="project-description">Advanced signal processing for wave pattern detection and analysis.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Signal Processing</span>
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">DSP</span>
+                                </div>
+                                <button class="view-project-btn">View Project <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 5: calAI -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-preview">
-                            <img src="5.png" alt="Rising Stars in Research" class="project-image">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Calorie Tracking App Project</h3>
-                                <p class="project-short">A Comprehensive Calorie & Nutrition Tracking App</p>
-                                <span class="view-more">View Details</span>
+                    
+                    <div class="project-card" data-project="4">
+                        <div class="project-card-inner">
+                            <div class="project-image-container">
+                                <img src="5.png" alt="CalAI - Nutrition App" class="project-image">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Calorie Tracking App</h3>
+                                <p class="project-description">Comprehensive nutrition and calorie tracking with AI-powered recommendations.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">SwiftUI</span>
+                                    <span class="project-tag">Firebase</span>
+                                    <span class="project-tag">AI</span>
+                                </div>
+                                <button class="view-project-btn">View Project <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project 6: Fashion minst -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-preview">
-                            <img src="6.png" alt="Rising Stars in Research" class="project-image">
-                            <div class="project-overlay">
-                                <h3 class="project-title">Fashion-MNIST Classification with Convolutional Neural Networks</h3>
-                                <p class="project-short">Building a CNN for Fashion Image Recognition</p>
-                                <span class="view-more">View Details</span>
+                    
+                    <div class="project-card" data-project="5">
+                        <div class="project-card-inner">
+                            <div class="project-image-container">
+                                <img src="6.png" alt="Fashion-MNIST Classification" class="project-image">
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Fashion-MNIST Classification</h3>
+                                <p class="project-description">CNN implementation for fashion image recognition with high accuracy.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Deep Learning</span>
+                                    <span class="project-tag">TensorFlow</span>
+                                    <span class="project-tag">CNN</span>
+                                </div>
+                                <button class="view-project-btn">View Project <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="skills animate__animated animate__fadeInUp animate__delay-1s">
-                <h2 class="section-title">My Skills</h2>
+            <section id="skills" class="skills-section">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Technologies and skills I've mastered throughout my journey</p>
+                </div>
+                
                 <div class="skills-container">
-                    <div class="skill-item" data-aos="fade-up">Swift</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="50">iOS Development</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="100">UI/UX Design</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="150">Python</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="200">Machine Learning</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="250">TensorFlow</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="300">LSTM Networks</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="350">Data Analysis</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="400">Data Visualization</div>
-                    <div class="skill-item" data-aos="fade-up" data-aos-delay="450">Maths</div>
+                    <div class="skills-category">
+                        <h3 class="category-title">Mobile Development</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-level="advanced">
+                                <div class="skill-icon"><i class="fab fa-swift"></i></div>
+                                <div class="skill-info">
+                                    <h4>Swift</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="advanced">
+                                <div class="skill-icon"><i class="fab fa-apple"></i></div>
+                                <div class="skill-info">
+                                    <h4>iOS Development</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>SwiftUI</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                                <div class="skill-info">
+                                    <h4>React Native</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 50%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h3 class="category-title">Data Science</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-level="advanced">
+                                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="advanced">
+                                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                                <div class="skill-info">
+                                    <h4>Machine Learning</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                                <div class="skill-info">
+                                    <h4>Data Analysis</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                                <div class="skill-info">
+                                    <h4>TensorFlow</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category">
+                        <h3 class="category-title">Other Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-level="advanced">
+                                <div class="skill-icon"><i class="fas fa-square-root-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>Mathematics</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>Firebase</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-signal"></i></div>
+                                <div class="skill-info">
+                                    <h4>Signal Processing</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-level="intermediate">
+                                <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="skill-info">
+                                    <h4>Git</h4>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="experience animate__animated animate__fadeInUp animate__delay-1s">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="experience-container">
-                    <div class="experience-card" data-aos="fade-up">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Software Engineer Internship</h3>
-                            <p class="experience-company">IBERIA GROUP ENGINEERING & CONSULTING MEXICO</p>
-                            <p class="experience-period">Jun 2022 - Jan 2023 (8 months)</p>
-                            <p class="experience-location">Mexico City Metropolitan Area · On-site</p>
-                        </div>
-                        <div class="experience-content">
-                            <ul class="experience-list">
-                                <li>Support in the development of a website and an app for buying and selling in the agricultural sector.</li>
-                                <li>Preparation of company estimates using Excel.</li>
-                                <li>Assistance with ideas and coding for the development of the iOS and Android application.</li>
-                                <li>Creation of a website focused on the agricultural sector to complement the application.</li>
-                                <li>Use of Power BI for sales and business data visualization.</li>
-                            </ul>
+            <section id="experience" class="experience-section">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Work Experience</h2>
+                    <p class="section-subtitle">Professional journey and accomplishments</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jun 2022 - Jan 2023</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Software Engineer Internship</h3>
+                            <h4 class="timeline-company">IBERIA GROUP ENGINEERING & CONSULTING MEXICO</h4>
+                            <p class="timeline-location">Mexico City Metropolitan Area · On-site</p>
+                            <div class="timeline-details">
+                                <ul>
+                                    <li>Developed a website and mobile app for the agricultural sector marketplace</li>
+                                    <li>Created company estimates using Excel data analysis</li>
+                                    <li>Contributed code and ideas for both iOS and Android platforms</li>
+                                    <li>Built complementary agricultural sector website</li>
+                                    <li>Utilized Power BI for data visualization and business analytics</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="animate__animated animate__fadeIn animate__delay-2s">
-            <h2>Interested in working together?</h2>
-            <div class="footer-buttons">
-                <a href="mailto:diego571106@hotmail.com" class="contact-btn">Contact Me</a>
-                <a href="CV_Ingles.pdf" download="Diego_Ortega_CV.pdf" class="download-btn">Download CV</a>
+        <footer id="contact">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h2 class="footer-title">Let's Create Something Together</h2>
+                    <p class="footer-text">I'm open to job opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+                    <div class="footer-cta">
+                        <a href="mailto:diego571106@hotmail.com" class="btn primary-btn">Contact Me</a>
+                        <a href="CV_Ingles.pdf" download="Diego_Ortega_CV.pdf" class="btn outline-btn">Download CV</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/diego-ortega-castellanos-436b2b210/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/diegoscience312" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="mailto:diego571106@hotmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Diego Ortega Castellanos · Made with <i class="fas fa-heart"></i> and a lot of <i class="fas fa-coffee"></i></p>
+                </div>
             </div>
-            <p>&copy; 2025 Diego Ortega Castellanos - All Rights Reserved</p>
         </footer>
     </div>
 
-    <!-- Modal único para mostrar detalles del proyecto -->
-    <div id="project-modal" class="project-details" style="display:none;">
-        <div class="project-details-content">
-            <div class="details-header">
-                <button id="modal-close" class="close-details"><i class="fas fa-times"></i></button>
-                <h3 id="modal-title" class="project-title"></h3>
-                <p id="modal-duration" class="project-duration"></p>
-                <p id="modal-institution" class="project-institution"></p>
+    <!-- Modal de Proyecto -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <div class="modal-meta">
+                        <p id="modal-duration" class="modal-duration"></p>
+                        <p id="modal-institution" class="modal-institution"></p>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image-container">
+                        <img id="modal-image" src="" alt="" class="modal-image">
+                    </div>
+                    <div id="modal-description" class="modal-description"></div>
+                    <div id="modal-tags" class="modal-tags"></div>
+                </div>
+                <div class="modal-footer">
+                    <a id="modal-link" href="#" target="_blank" class="btn primary-btn">View Repository <i class="fab fa-github"></i></a>
+                </div>
             </div>
-            <div id="modal-description"></div>
-            <div id="modal-tags" class="project-tags"></div>
-            <a id="modal-link" class="project-link" target="_blank">View project <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 
-    <!-- Script para animaciones e interactividad -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Initialize AOS
-        document.addEventListener("DOMContentLoaded", function () {
-            // Inicializar AOS
-            AOS.init({
-                duration: 800,
-                once: true,
-            });
 
-            // Custom cursor
-            const cursor = document.querySelector(".cursor");
-            document.addEventListener("mousemove", (e) => {
+        const cursorGlow = document.querySelector('.cursor-glow');
+        const cursorDot = document.querySelector('.cursor-dot');
+
+        document.addEventListener('mousemove', e => {
                 requestAnimationFrame(() => {
-                    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                    cursorGlow.style.left = e.clientX + 'px';
+                    cursorGlow.style.top = e.clientY + 'px';
+                    cursorDot.style.left = e.clientX + 'px';
+                    cursorDot.style.top = e.clientY + 'px';
                 });
             });
-
-            // Elementos del modal
-            const modal = document.getElementById("project-modal");
-            const modalClose = document.getElementById("modal-close");
-            const modalTitle = document.getElementById("modal-title");
-            const modalDuration = document.getElementById("modal-duration");
-            const modalInstitution = document.getElementById("modal-institution");
-            const modalDescription = document.getElementById("modal-description");
-            const modalTags = document.getElementById("modal-tags");
-            const modalLink = document.getElementById("modal-link");
-
-            // Función para abrir el modal con datos específicos
-            function openProjectModal(data) {
-                modalTitle.textContent = data.title;
-                modalDuration.textContent = data.duration;
-                modalInstitution.textContent = data.institution;
-                
-                // Dividir la descripción en párrafos
-                const paragraphs = data.description.split('. ');
-                let formattedDescription = '';
-                let currentParagraph = '';
-                
-                // Agrupar las oraciones en párrafos (cada 2-3 oraciones)
-                for (let i = 0; i < paragraphs.length; i++) {
-                    if (i > 0 && i % 3 === 0) { // Cambiar a cada 2 o 4 según prefieras
-                        formattedDescription += '<p>' + currentParagraph.trim() + '.</p>';
-                        currentParagraph = paragraphs[i];
-                    } else {
-                        currentParagraph += paragraphs[i] + (i < paragraphs.length - 1 ? '. ' : '');
+            
+            // Hover effects for links and buttons
+            const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-item');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorGlow.classList.add('cursor-hover');
+                    cursorDot.classList.add('cursor-hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorGlow.classList.remove('cursor-hover');
+                    cursorDot.classList.remove('cursor-hover');
+                });
+            });
+            
+            // Navigation toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.classList.toggle('nav-open');
+            });
+            
+            // Close navigation when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                });
+            });
+            
+            // Scroll reveal animation
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
                     }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.section-header, .project-card, .skills-category, .timeline-item').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Project modal functionality
+            const projectModal = document.getElementById('project-modal');
+            const modalClose = document.querySelector('.modal-close');
+            const modalBackdrop = document.querySelector('.modal-backdrop');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDuration = document.getElementById('modal-duration');
+            const modalInstitution = document.getElementById('modal-institution');
+            const modalDescription = document.getElementById('modal-description');
+            const modalTags = document.getElementById('modal-tags');
+            const modalLink = document.getElementById('modal-link');
+            const modalImage = document.getElementById('modal-image');
+            
+            // Project data
+            const projectData = [
+                {
+                    title: "Real Madrid Store App Development Gamification & Personalized Shopping Experience",
+                    duration: "September 2024 - December 2024",
+                    institution: "ESEI International Business School Barcelona",
+                    image: "1.png",
+                    description: "As part of my work, I developed an official application for Real Madrid stores using Swift in Xcode. The goal was to enhance the in-store customer experience through an interactive and engaging digital platform. The app includes gamification, location-based offers, a digital collection system, visit-based rewards, and a secure login system using email and password.<br><br>To build this project, I leveraged several tools. Swift and Xcode were used for the core development of the app, ensuring a native and optimized experience for iOS users. Softr Studio played a crucial role in creating a data analysis page linked to the application. Airtable was used as the primary database to manage user information and store promotions, while Zapier was implemented to automate processes, making the app more efficient and reducing manual work.<br><br>One of the biggest challenges was implementing real-time data updates for the news section, ensuring users always had access to the latest information. Additionally, optimizing UX/UI was a key focus to make navigation seamless and intuitive. Another important aspect was the integration of No-Code tools like Softr and Airtable, which allowed for rapid iteration and reduced development time.",
+                    tags: ["Swift", "iOS", "UI/UX", "SwiftUI", "SQL", "Firebase", "API Integration", "Zapier", "Airtable", "Softr Studio", "Authentication Systems", "Geolocation Integration"],
+                    link: "https://github.com/diegoscience312/Real-Madrid-Store-App/blob/13b621a1998603f89f188b6bbf7c150e8838249b/RealMadridApp.zip"
+                },
+                {
+                    title: "Stock Market Prediction using LSTM Neural Networks",
+                    duration: "January 2023 - March 2023",
+                    institution: "Tecnológico de Monterrey",
+                    image: "2.png",
+                    description: "I developed a stock market price prediction model using LSTM (Long Short-Term Memory) neural networks to forecast Apple Inc. (AAPL) stock prices. Using the Yahoo Finance API, I collected five years of historical stock data, including not only closing prices but also technical indicators like moving averages, RSI, volatility, and volume changes. These additional features provided a more comprehensive dataset for training.<br><br>To prepare the data, I applied MinMax scaling for normalization and created 30-day sequences to capture long-term dependencies. The dataset was split 80% for training and 20% for testing. I designed a deep learning model with bidirectional LSTM layers, dropout for regularization, and Huber loss to enhance prediction stability. The model was trained using Adam optimization and included early stopping and checkpointing to prevent overfitting.<br><br>Once trained, the model was evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R² score, providing insights into prediction accuracy. To visualize results, I plotted actual vs. predicted prices and implemented a function to forecast stock prices for the next seven days based on the last available data.",
+                    tags: ["Python", "LSTM", "TensorFlow", "Machine Learning", "Neural Networks", "Financial Data Analysis", "Time Series Forecasting", "Data Preprocessing", "Forecasting & Automation"],
+                    link: "https://github.com/diegoscience312/Stock-Market-Prediction/blob/37f68f90b6143e68cd04235e26fcfcdb91841a6b/StockMarketPrediction.py"
+                },
+                {
+                    title: "Identification of Rising Stars through Data Filtering and Machine Learning",
+                    duration: "August 2022 - October 2022",
+                    institution: "Tecnológico de Monterrey",
+                    image: "3.png",
+                    description: "I developed a data analysis model to identify rising stars in academic research by analyzing author publication metrics. Using Python libraries such as pandas, scikit-learn, and statsmodels, I processed and merged large datasets from Scopus, extracting key bibliometric indicators like citations, impact factors, and author-specific metrics.<br><br>The dataset was cleaned, missing values were handled, and relevant features were engineered to improve predictive accuracy. To predict an author's future impact, I implemented multiple machine learning models, including Linear Regression, Decision Trees, and K-Nearest Neighbors (KNN). The data was split into training and test sets, and different preprocessing techniques, such as feature scaling and polynomial transformations, were applied to optimize performance.<br><br>The models were evaluated using R² score, Mean Squared Error (MSE), and Mean Absolute Error (MAE) to measure their predictive accuracy. For visualization and interpretability, I used seaborn and Matplotlib to explore trends in research impact, correlations between metrics, and model performance comparisons. Additionally, I leveraged decision tree visualizations to interpret model decisions, providing insights into the most influential factors for academic success.",
+                    tags: ["Python", "Data Analysis", "Machine Learning", "Data Visualization", "Pandas", "Numpy", "Model Evaluation & Optimization", "Data Visualization & Interpretation"],
+                    link: "https://github.com/diegoscience312/Rising-Stars-in-Research/blob/a8ba0a92b46b3611a1e7e68eafaffd55a88f807c/RisingStars.ipynb"
+                },
+                {
+                    title: "Wave Detection and Signal Processing: Analyzing Frequency Patterns with Python",
+                    duration: "August 2023 - October 2023",
+                    institution: "Tecnológico de Monterrey",
+                    image: "4.png",
+                    description: "This project focuses on detecting and analyzing wave signals through advanced signal processing techniques. Using Python, the system reads and processes wave data, applying various transformations and filters to extract meaningful insights. The primary objective is to detect specific frequency patterns and enhance signal clarity for further interpretation.<br><br>The core functionality involves applying Fourier Transform and filtering techniques to identify relevant frequency components within the wave data. The system processes raw signals by removing noise and highlighting critical wave patterns. Additionally, visualizations provide a clear representation of how different transformations affect the data.<br><br>One of the key aspects of the project is its modular design, allowing for seamless data mapping and processing. The second module, implemented in the complementary notebook, enables the structured transformation of input data into processed representations, making it adaptable to various signal types. This structure ensures flexibility and efficiency in analyzing different waveforms.",
+                    tags: ["Python", "NumPy", "SciPy", "Matplotlib", "Signal Processing", "Fourier Transform", "Data Analysis", "Data Visualization", "Machine Learning", "Time Series Analysis", "Spectral Analysis", "Digital Signal Processing (DSP)"],
+                    link: "https://github.com/diegoscience312/Wave-Detection-and-Signal-Processing/blob/c5932c64badf97936f161c953183ae68245c60bc/ondasreto_mapper.ipynb"
+                },
+                {
+                    title: "Mobile Solution for Personalized Nutrition Tracking, Macronutrient Monitoring, and AI-Powered Diet Assistance",
+                    duration: "January 2025 - Present",
+                    institution: "Personal Project",
+                    image: "5.png",
+                    description: "I've developed a calorie tracking application using SwiftUI and Firebase, focused on an intuitive user experience with robust functionality. The app allows users to log their daily food intake, monitor macronutrients, and set personalized dietary goals, all with a modern interface featuring custom progress bars and animated transitions.<br><br>On the technical side, I implemented an architecture using environment objects to manage the app's state, with my FoodDiaryManager class handling diary operations and syncing with Firebase. User authentication is handled through Firebase Authentication and Firestore for data persistence, while I included custom components like MacroCircleView to visualize nutrient percentages.<br><br>The food search functionality is powered by the Edamam API, providing detailed nutritional information with asynchronous image loading and error handling. The food details view includes an interactive portion selector with real-time macronutrient calculations when users modify their serving size. Beyond the core functionality, I incorporated an AI assistant using Gemini in ChatbotView to answer nutrition questions.",
+                    tags: ["SwiftUI", "Firebase", "UI/UX Design", "Swift", "Firestore", "Authentication", "API Integration", "Asynchronous Programming", "State Management", "Custom Components", "Responsive Design", "Dark Mode Support"],
+                    link: "https://github.com/diegoscience312/Nutrition-Tracking-Macronutrient-Monitoring-and-AI-Powered-Diet-Assistance/blob/7ded5848cb37541bde6e6c03d7db538bb2d0f856/Macro%20Tracking"
+                },
+                {
+                    title: "Fashion-MNIST Classification with Convolutional Neural Networks",
+                    duration: "September 2023 - November 2023",
+                    institution: "Tecnológico de Monterrey",
+                    image: "6.png",
+                    description: "For this project, I implemented a Convolutional Neural Network (CNN) to classify images from the Fashion-MNIST dataset. Fashion-MNIST is a widely used benchmark dataset consisting of 70,000 grayscale images (28x28 pixels) of clothing items, such as t-shirts, dresses, sneakers, and bags.<br><br>I used TensorFlow and Keras to construct the CNN architecture, leveraging multiple convolutional layers to extract spatial features from the input images. The preprocessing pipeline involved normalizing the pixel values to a range of [0,1] to improve convergence during training. To enhance model generalization, I applied batch normalization and dropout layers.<br><br>After training, the model achieved an accuracy of approximately 91% on the test set, demonstrating its effectiveness in recognizing fashion items. To evaluate the model, I generated a confusion matrix and a classification report, analyzing precision, recall, and F1-score for each class.",
+                    tags: ["Deep Learning", "TensorFlow", "Keras", "Convolutional Neural Networks", "Image Classification", "Data Preprocessing", "Model Optimization", "Regularization Techniques", "Hyperparameter Tuning"],
+                    link: "https://github.com/diegoscience312/Fashion-MNIST-Classification/blob/25c609d0e0fe407d15ffc94cbb892203c7a66952/Proyecto_aprendizaje_profundo.ipynb"
                 }
+            ];
+            
+            // Open modal function
+            function openProjectModal(projectIndex) {
+                const project = projectData[projectIndex];
+                modalTitle.textContent = project.title;
+                modalDuration.textContent = project.duration;
+                modalInstitution.textContent = project.institution;
+                modalDescription.innerHTML = project.description;
+                modalImage.src = project.image;
+                modalImage.alt = project.title;
+                modalLink.href = project.link;
                 
-                // Agregar el último párrafo si queda algo
-                if (currentParagraph) {
-                    formattedDescription += '<p>' + currentParagraph.trim() + '</p>';
-                }
-                
-                modalDescription.innerHTML = formattedDescription;
-                
-                // Resto del código...
-                // Limpiar y añadir tags
+                // Clear existing tags
                 modalTags.innerHTML = '';
-                data.tags.forEach(tag => {
+                
+                // Create tags
+                project.tags.forEach(tag => {
                     const tagElement = document.createElement('span');
-                    tagElement.className = 'project-tag';
+                    tagElement.className = 'modal-tag';
                     tagElement.textContent = tag;
                     modalTags.appendChild(tagElement);
                 });
                 
-                // Configurar enlace
-                modalLink.href = data.link;
-                
-                // Mostrar modal
-                modal.style.display = 'flex';
-                document.body.classList.add("no-scroll");
-                
-                // Animar entrada
-                setTimeout(() => {
-                    modal.style.opacity = '1';
-                    modal.querySelector('.project-details-content').style.transform = 'translateY(0)';
-                }, 10);
+                // Show modal
+                projectModal.classList.add('active');
+                document.body.classList.add('modal-open');
             }
-
-            // Función para cerrar el modal
-            function closeProjectModal() {
-                modal.querySelector('.project-details-content').style.transform = 'translateY(50px)';
-                modal.style.opacity = '0';
-                
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    document.body.classList.remove("no-scroll");
-                }, 300);
-            }
-
-            // Escuchar clic en el botón de cerrar
-            modalClose.addEventListener('click', closeProjectModal);
             
-            // Cerrar al hacer clic fuera del contenido
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
+            // Close modal function
+            function closeProjectModal() {
+                projectModal.classList.remove('active');
+                document.body.classList.remove('modal-open');
+            }
+            
+            // Set up click events for project cards
+            document.querySelectorAll('.view-project-btn').forEach((btn, index) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const projectIndex = btn.closest('.project-card').getAttribute('data-project');
+                    openProjectModal(projectIndex);
+                });
+            });
+            
+            // Close modal when clicking close button or backdrop
+            modalClose.addEventListener('click', closeProjectModal);
+            modalBackdrop.addEventListener('click', closeProjectModal);
+            
+            // Close modal on escape key
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && projectModal.classList.contains('active')) {
                     closeProjectModal();
                 }
             });
-
-            // Configurar clicks en las tarjetas de proyecto
-            const projectCards = document.querySelectorAll(".project-card");
             
-            projectCards.forEach((card, index) => {
-                const viewMoreBtn = card.querySelector(".view-more");
-                
-                // Datos para cada proyecto
-                const projectData = [
-                    {
-                        title: "Real Madrid Store App Development Gamification & Personalized Shopping Experience",
-                        duration: "September 2024 - December 2024",
-                        institution: "ESEI International Business School Barcelona",
-                        description: "As part of my work, I developed an official application for Real Madrid stores using Swift in Xcode. \The goal was to enhance the in-store customer experience through an interactive and engaging digital platform. The app includes gamification, location-based offers, a digital collection system, visit-based rewards, and a secure login system using email and password. To build this project, I leveraged several tools. Swift and Xcode were used for the core development of the app, ensuring a native and optimized experience for iOS users. Softr Studio played a crucial role in creating a data analysis page linked to the application. Airtable was used as the primary database to manage user information and store promotions, while Zapier was implemented to automate processes, making the app more efficient and reducing manual work. One of the biggest challenges was implementing real-time data updates for the news section, ensuring users always had access to the latest information. Additionally, optimizing UX/UI was a key focus to make navigation seamless and intuitive. Another important aspect was the integration of No-Code tools like Softr and Airtable, which allowed for rapid iteration and reduced development time. Automating processes with Zapier also streamlined operations, minimizing the need for manual input and enhancing overall efficiency. Throughout this project, I gained valuable experience in combining traditional development with No-Code solutions, allowing me to focus on high-impact features while leveraging automation to handle repetitive tasks.",
-                        tags: ["Swift", "iOS", "UI/UX", "SwiftUI", "SQL", "Firebase", "API Integration", "Zapier", "Airtable", "Softr Studio", "Authentication Systems", "Geolocation Integration"],
-                        link: "https://github.com/diegoscience312/Real-Madrid-Store-App/blob/13b621a1998603f89f188b6bbf7c150e8838249b/RealMadridApp.zip"
-                    },
-                    {
-                        title: "Stock Market Prediction using LSTM Neural Networks",
-                        duration: "January 2023 - March 2023",
-                        institution: "Tecnológico de Monterrey",
-                        description: "I developed a stock market price prediction model using LSTM (Long Short-Term Memory) neural networks to forecast Apple Inc. (AAPL) stock prices. Using the Yahoo Finance API, I collected five years of historical stock data, including not only closing prices but also technical indicators like moving averages, RSI, volatility, and volume changes. These additional features provided a more comprehensive dataset for training. To prepare the data, I applied MinMax scaling for normalization and created 30-day sequences to capture long-term dependencies. The dataset was split 80% for training and 20% for testing. I designed a deep learning model with bidirectional LSTM layers, dropout for regularization, and Huber loss to enhance prediction stability. The model was trained using Adam optimization and included early stopping and checkpointing to prevent overfitting. Once trained, the model was evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R² score, providing insights into prediction accuracy. To visualize results, I plotted actual vs. predicted prices and implemented a function to forecast stock prices for the next seven days based on the last available data. This project allowed me to refine my deep learning skills for time series forecasting, improve feature engineering for financial models, and optimize LSTM architectures for real-world applications. I also gained experience in integrating technical indicators into machine learning models to enhance prediction accuracy.",
-                        tags: ["Python", "LSTM", "TensorFlow", "Machine Learning", "Neural Networks", "Financial Data Analysis", "Time Series Forecasting", "Data Preprocessing", "Forecasting & Automation" ],
-                        link: "https://github.com/diegoscience312/Stock-Market-Prediction/blob/37f68f90b6143e68cd04235e26fcfcdb91841a6b/StockMarketPrediction.py"
-                    },
-                    {
-                        title: "Identification of Rising Stars through Data Filtering and Machine Learning",
-                        duration: "August 2022 - October 2022",
-                        institution: "Tecnológico de Monterrey",
-                        description: "I developed a data analysis model to identify rising stars in academic research by analyzing author publication metrics. Using Python libraries such as pandas, scikit-learn, and statsmodels, I processed and merged large datasets from Scopus, extracting key bibliometric indicators like citations, impact factors, and author-specific metrics. The dataset was cleaned, missing values were handled, and relevant features were engineered to improve predictive accuracy. To predict an author’s future impact, I implemented multiple machine learning models, including Linear Regression, Decision Trees, and K-Nearest Neighbors (KNN). The data was split into training and test sets, and different preprocessing techniques, such as feature scaling and polynomial transformations, were applied to optimize performance. The models were evaluated using R² score, Mean Squared Error (MSE), and Mean Absolute Error (MAE) to measure their predictive accuracy. For visualization and interpretability, I used seaborn and Matplotlib to explore trends in research impact, correlations between metrics, and model performance comparisons. Additionally, I leveraged decision tree visualizations to interpret model decisions, providing insights into the most influential factors for academic success. This project enhanced my expertise in data preprocessing, feature engineering, and predictive modeling for bibliometric analysis. By working with real-world academic data, I strengthened my ability to derive meaningful insights and apply machine learning techniques to assess research impact effectively.",
-                        tags: ["Python", "Data Analysis", "Machine Learning", "Data Visualization", "Pandas", "Numpy", "Model Evaluation & Optimization", "Data Visualization & Interpretation"],
-                        link: "https://github.com/diegoscience312/Rising-Stars-in-Research/blob/a8ba0a92b46b3611a1e7e68eafaffd55a88f807c/RisingStars.ipynb"
-                    },
-                    {
-                        title: "Wave Detection and Signal Processing: Analyzing Frequency Patterns with Python",
-                        duration: "August 2023 - October 2023",
-                        institution: "Tecnológico de Monterrey",
-                        description: "This project focuses on detecting and analyzing wave signals through advanced signal processing techniques. Using Python, the system reads and processes wave data, applying various transformations and filters to extract meaningful insights. The primary objective is to detect specific frequency patterns and enhance signal clarity for further interpretation. The core functionality involves applying Fourier Transform and filtering techniques to identify relevant frequency components within the wave data. The system processes raw signals by removing noise and highlighting critical wave patterns. Additionally, visualizations provide a clear representation of how different transformations affect the data. One of the key aspects of the project is its modular design, allowing for seamless data mapping and processing. The second module, implemented in the complementary notebook, enables the structured transformation of input data into processed representations, making it adaptable to various signal types. This structure ensures flexibility and efficiency in analyzing different waveforms. This project is valuable for applications in fields such as telecommunications, biomedical engineering, and environmental monitoring, where accurate wave detection is crucial. By leveraging scientific computing libraries, the system efficiently processes large datasets, making it a scalable solution for real-world signal analysis challenges.",
-                        tags: ["Python", "NumPy", "SciPy", "Matplotlib", "Signal Processing", "Fourier Transform", "Data Analysis", "Data Visualization", "Machine Learning", "Time Series Analysis", "Spectral Analysis", "Digital Signal Processing (DSP)"],
-                        link: "https://github.com/diegoscience312/Wave-Detection-and-Signal-Processing/blob/c5932c64badf97936f161c953183ae68245c60bc/ondasreto_mapper.ipynb"
-                    },
-                    {
-                        title: "Mobile Solution for Personalized Nutrition Tracking, Macronutrient Monitoring, and AI-Powered Diet Assistance",
-                        duration: "January 2025 - Present",
-                        institution: "Personal Proyect",
-                        description: "I've developed a calorie tracking application using SwiftUI and Firebase, focused on an intuitive user experience with robust functionality. The app allows users to log their daily food intake, monitor macronutrients, and set personalized dietary goals, all with a modern interface featuring custom progress bars and animated transitions. On the technical side, I implemented an architecture using environment objects to manage the app's state, with my FoodDiaryManager class handling diary operations and syncing with Firebase. User authentication is handled through Firebase Authentication and Firestore for data persistence, while I included custom components like MacroCircleView to visualize nutrient percentages. The food search functionality is powered by the Edamam API, providing detailed nutritional information with asynchronous image loading and error handling. The food details view includes an interactive portion selector with real-time macronutrient calculations when users modify their serving size. Beyond the core functionality, I incorporated an AI assistant using Gemini in ChatbotView to answer nutrition questions, an onboarding process for new users, and a profile section for updating goals. Navigation is tab-based with custom icons and a coordinator pattern to manage flow between authentication, onboarding, and main functionality.",
-                        tags: ["SwiftUI", "Firebase", "UI/UX Design", "Swift", "Firestore", "Authentication", "API Integration", "Asynchronous Programming", "State Management", "Custom Components", "Responsive Design", "Dark Mode Support"],
-                        link: "https://github.com/diegoscience312/Nutrition-Tracking-Macronutrient-Monitoring-and-AI-Powered-Diet-Assistance/blob/7ded5848cb37541bde6e6c03d7db538bb2d0f856/Macro%20Tracking"
-                    },
-                    {
-                        title: "Fashion-MNIST Classification with Convolutional Neural Networks",
-                        duration: "September 2023 - November 2023",
-                        institution: "Tecnológico de Monterrey",
-                        description: "For this project, I implemented a Convolutional Neural Network (CNN) to classify images from the Fashion-MNIST dataset. Fashion-MNIST is a widely used benchmark dataset consisting of 70,000 grayscale images (28x28 pixels) of clothing items, such as t-shirts, dresses, sneakers, and bags. The main objective was to build a deep learning model capable of accurately distinguishing between the 10 different classes in the dataset. I used TensorFlow and Keras to construct the CNN architecture, leveraging multiple convolutional layers to extract spatial features from the input images. The preprocessing pipeline involved normalizing the pixel values to a range of [0,1] to improve convergence during training. The dataset was split into 60,000 training images and 10,000 test images, ensuring that the model was evaluated on unseen data. To enhance model generalization, I also applied batch normalization and dropout layers. The architecture consisted of multiple Conv2D layers with ReLU activation functions, followed by MaxPooling layers to reduce dimensionality while preserving important features. A Flatten layer converted the extracted feature maps into a fully connected layer, culminating in a Softmax output layer for multi-class classification. For optimization, I utilized the Adam optimizer with a learning rate of 0.001 and categorical cross-entropy as the loss function. The model was trained over 20 epochs with a batch size of 64, monitoring its performance through accuracy and loss metrics. To prevent overfitting, I introduced L2 regularization and dropout layers, ensuring that the network learned robust representations rather than memorizing training data. After training, the model achieved an accuracy of approximately 91% on the test set, demonstrating its effectiveness in recognizing fashion items. To evaluate the model, I generated a confusion matrix and a classification report, analyzing precision, recall, and F1-score for each class. Some misclassifications were observed between similar categories, such as dresses and t-shirts, indicating potential improvements with more complex architectures or data augmentation techniques. Future work could explore transfer learning with pre-trained models like MobileNetV2 or ResNet to enhance performance. This project reinforced my expertise in deep learning, CNNs, and image classification while providing valuable insights into model optimization and deployment.",
-                        tags: ["Deep Learning", "TensorFlow", "Keras", "Convolutional Neural Networks", "Image Classification", "Data Preprocessing", "Model Optimization", "Regularization Techniques", "Hyperparameter Tuning", "Evaluation Metrics", "Machine Learning", "Neural Network Architecture"],
-                        link: "https://github.com/diegoscience312/Fashion-MNIST-Classification/blob/25c609d0e0fe407d15ffc94cbb892203c7a66952/Proyecto_aprendizaje_profundo.ipynb"
-                    }
-                ];
-                
-                // Añadir evento de clic a cada botón de ver más
-                viewMoreBtn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    openProjectModal(projectData[index]);
+            // 3D tilt effect for project cards
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach(card => {
+                // Eliminamos el efecto de inclinación 3D que causa problemas
+                card.addEventListener('mouseenter', () => {
+                    // Al pasar el cursor, la tarjeta se eleva y adquiere una sombra más profunda
+                    card.style.transform = 'translateY(-15px) scale(1.03)';
+                    card.style.boxShadow = '0 20px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(110, 86, 207, 0.3)';
+                    card.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease';
+                    
+                    // También podemos añadir un sutil resplandor al borde
+                    card.style.border = '1px solid rgba(110, 86, 207, 0.3)';
                 });
                 
-                // También hacer que toda la superposición sea clickeable
-                card.querySelector(".project-overlay").addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    openProjectModal(projectData[index]);
+                card.addEventListener('mouseleave', () => {
+                    // Al quitar el cursor, la tarjeta vuelve a su posición original suavemente
+                    card.style.transform = 'translateY(0) scale(1)';
+                    card.style.boxShadow = 'var(--shadow-md)';
+                    card.style.border = 'none';
+                    card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease';
                 });
             });
-
-            // Scroll reveal para los títulos de sección
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("visible");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.2 }
-            );
-
-            document.querySelectorAll(".section-title").forEach((title) => {
-                title.classList.add("hidden");
-                observer.observe(title);
-            });
-        });
     </script>
 </body>
 </html>
