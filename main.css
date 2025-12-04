@@ -224,20 +224,8 @@ section {
 
 /* Skills */
 .skills-section {
-    background-color: rgba(13, 14, 20, 0.5);
     position: relative;
     overflow: hidden;
-}
-
-.skills-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(110, 86, 207, 0.05) 0%, rgba(255, 84, 112, 0.05) 100%);
-    z-index: -1;
 }
 
 .skills-container {
@@ -464,6 +452,19 @@ section {
     height: 0.8rem;
     background-color: var(--accent-primary);
     border-radius: 50%;
+}
+
+.timeline-technologies {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.timeline-technologies strong {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 /* Footer */
@@ -714,8 +715,8 @@ footer::before {
     }
     
     .profile-container {
-        width: 28rem;
-        height: 28rem;
+        width: 30.8rem;
+        height: 30.8rem;
     }
 }
 
@@ -1239,8 +1240,8 @@ header {
 
 .profile-container {
     position: relative;
-    width: 32rem;
-    height: 32rem;
+    width: 35.2rem;
+    height: 35.2rem;
 }
 
 .profile-outline {
